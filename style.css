@@ -40,7 +40,7 @@ body {
     bottom: 0px;
     z-index: -1;
 }
-.links {
+.links ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
