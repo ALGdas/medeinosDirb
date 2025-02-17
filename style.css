@@ -57,9 +57,17 @@ body {
 .links ul li a img:active{
     background-color: #99bd95;
     border-radius: 50%;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
-.custom-cursor {
-    cursor: url('img/lape.png'), auto;
+#altC {
+    position: absolute;
+    top: 0%;
+    right: 2%;
+    display: flex;
+    margin: none;
+    z-index: -1;
+
+    color: #567e52;
+    font-size: 30px;
 }
