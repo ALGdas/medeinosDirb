@@ -5,6 +5,18 @@
 
     <link rel="icon" href="favicon.ico" type="img/x-icon">
     <title>Medeinos Dirbiniai</title>
+    <style>
+         .stuff {
+            position: absolute;
+            top: 120px;
+            width: 1200px;
+            height: 800px;
+            background: hsl(115, 22%, 66%);
+            overflow-y: auto;
+            border-radius: 5px;
+        }
+
+    </style>
 </head>
 <body>
     <div class="virsus">
@@ -23,6 +35,18 @@
             </div>
         </div>
         <img src="img/t2.png" alt="medis" id="tree">
+
+        <div class="stuff">
+            
+        </div>
     </div>
+
+    <script>
+        document.addEventListener("keydown", function(event) {
+            if (event.altKey && event.key === "C") {
+                document.body.classList.toggle("custom-cursor");
+            }
+        });
+    </script>
 </body>
 </html>
