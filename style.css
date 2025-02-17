@@ -1,7 +1,13 @@
+.virsus{
+    width: 1200px;
+    margin: auto;
+}
+
 .header {
     background-color: #98bb95;
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     z-index: 10;
 }
 
@@ -35,11 +41,10 @@ body {
     z-index: -1;
 }
 .links {
-    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    right: 55px;
-    top: 20px;
-    position: absolute;
-
+    gap: 20px;
     
 }
