@@ -49,3 +49,13 @@ body {
     gap: 20px;
     
 }
+.links ul li a img:hover{
+    background-color: #465844;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.links ul li a img:active{
+    background-color: #99bd95;
+    border-radius: 50%;
+    transition: 0.5s;
+}
