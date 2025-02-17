@@ -1,0 +1,45 @@
+.header {
+    background-color: #98bb95;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+}
+
+body {
+    background-color: #5b8357;
+}
+
+#logo {
+    display: flex;
+    float: left;
+}
+#name {
+    display: flex;
+    width: 20%;
+
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #A54200;
+}
+#name2 {
+    color: #D85600;
+}
+#tree {
+    position: absolute;
+    display: flex;
+    float: left;
+    width: 50%;
+    left: -480px;
+    bottom: 0px;
+    z-index: -1;
+}
+.links {
+    justify-content: space-between;
+    display: flex;
+    right: 55px;
+    top: 20px;
+    position: absolute;
+
+    
+}
