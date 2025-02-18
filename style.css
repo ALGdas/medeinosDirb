@@ -71,3 +71,32 @@ body {
     color: #567e52;
     font-size: 30px;
 }
+
+.stuff a img{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    display: inline-block;
+    width: 170px;
+    height: 200px;
+    border-radius: 30%;
+    transition: 0.5s;
+}
+.stuff a img:hover{
+    border-radius: 40%;
+    transition: 0.5s;
+
+    box-shadow: 0 0 10px #000;
+}
+
+.stuff a img:active{
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.stuff a {
+    display: inline-block;
+    list-style-type: none;
+}
