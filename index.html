@@ -14,17 +14,30 @@
             background: hsl(115, 22%, 66%);
             overflow-y: auto;
             border-radius: 5px;
+            color: white;
         }
 
         .hidden-image {
             position: fixed;
-            top: 50%;
-            left: 11%;
+            top: 88%;
+            left: 95%;
             transform: translate(-50%, -50%);
-            width: 300px; /* Adjust size */
+            width: 300px;
             height: auto;
-            display: none; /* Hidden by default */
+            display: none;
             z-index: 1;
+        }
+
+        .dropdown-container {
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        select {
+            font-size: 18px;
+            padding: 5px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -34,10 +47,22 @@
             <a href="#" id="logo">
                 <img src="img/logo.png" alt="Mdirb." width="100" height="100">
             </a>
-            <h1 id="name">MEDEINOS <span id="name2">DIRBINIAI</span></h1>
+            <h1 id="name">MEDEINOS&nbsp;<span id="name2">DIRBINIAI</span></h1>
+
+            <div class="dropdown-container">
+                <select id="categoryDropdown">
+                    <option value="dirb">Dirbiniai</option>
+                    <option value="ekspo">Ekspozitsijos</option>
+                </select>
+            </div>
+
 
             <div class="links">
                 <ul >
+                    <li>
+                        <p>medeinosdirbiniai@gmail.com</p>
+                    </li>
+
                     <li>
                         <a href="https://www.facebook.com/profile.php?id=100075913506892">
                         <img src="img/fb.svg" alt="facebook" width="50" height="50">
@@ -48,7 +73,8 @@
         </div>
         <img src="img/t2.png" alt="medis" id="tree">
 
-        <div class="stuff">
+        <div class="stuff" id="stuffContainer">
+            <!-- Dirbiniai -->
             <a href="#">
                 <img src="img/dirb/t1.jpg" alt="Dirb. 1">
             </a>
@@ -60,18 +86,63 @@
             </a>
         </div>
         
+
+        <div class="langas">
+            <div class="langas-dal">
+                <img src="" alt="img">
+                <video src=""></video>
+            </div>
+        </div>
+        
     </div>
 
-    <img id="secretImage" class="hidden-image" src="img/lape.png" alt="lape">
-    <p id="altC">alt + c(2x)</p>
+    
+
+    <img id="secretImage1" class="hidden-image" src="img/lape.png" alt="lape">
+    <img id="secretImage2" class="hidden-image" src="img/alisa.png" alt="alisa">
+    <img id="secretImage3" class="hidden-image" src="img/brela.png" alt="brela">
+    <img id="nothing" class="hidden-image" src="#" alt="">
+    <p id="altC">alt + c</p>
 
     <script>
+        const stuffContainer = document.getElementById("stuffContainer");
+        const dropdown = document.getElementById("categoryDropdown");
+
+        const content = {
+            dirb: `
+                <a href="#"><img src="img/dirb/t1.jpg" alt="Dirb. 1"></a>
+                <a href="#"><img src="img/dirb/t2.jpg" alt="Dirb. 2"></a>
+                <a href="#"><img src="img/dirb/t3.jpg" alt="Dirb. 3"></a>
+            `,
+
+            ekspo: `
+                <h1>Ekspozicijos</h1>
+                <p>Ekspozicijos</p>
+            `
+        };
+
+        dropdown.addEventListener("change", function () {
+            stuffContainer.innerHTML = content[this.value];
+        });
+    </script>
+
+    <script>
+        let images = ["secretImage1", "nothing", "secretImage2", "secretImage3"];
+        let currentIndex = 0;
+    
         document.addEventListener("keydown", function(event) {
             if (event.altKey && event.key === "c") {
-                let img = document.getElementById("secretImage");
-                img.style.display = img.style.display === "none" ? "block" : "none";
+                let currentImage = document.getElementById(images[currentIndex]);
+                currentImage.style.display = "none"; // Hide current image
+    
+                currentIndex = (currentIndex + 1) % images.length; // Move to next image
+    
+                let nextImage = document.getElementById(images[currentIndex]);
+                nextImage.style.display = "block"; // Show next image
             }
         });
     </script>
+
+
 </body>
 </html>

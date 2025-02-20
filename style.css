@@ -64,6 +64,19 @@ body {
     transition: 0.3s;
 }
 
+.links ul li p {
+    font-size: 15spx;
+    font-weight: bold;
+    color: #465844;
+    border: 1px solid;
+    border-color: #465844;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 3px;
+    
+}
+
 #altC {
     position: absolute;
     top: 0%;
@@ -103,4 +116,42 @@ body {
 .stuff a {
     display: inline-block;
     list-style-type: none;
+}
+
+
+.stuff video {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    display: inline-block;
+    width: 170px;
+    height: 200px;
+    transition: 0.5s;
+    border-radius: 10%;
+}
+.stuff video:hover{
+    transition: 0.5s;
+    box-shadow: 0 0 10px #000;
+    border-radius: 10%;
+}
+.stuff video:active{
+    transition: 0.3s;
+    background-color: #465844;
+    border-radius: 20%;
+}
+
+.langas {
+    background-color: #465844;
+    align-items: center;
+    opacity: 0.9;
+    border-radius: 10px;
+    width: 800px;
+    z-index: 1000;
+
+    display: none;
+    position: relative;
+    top: 10%;
+    right: 0%;
 }
