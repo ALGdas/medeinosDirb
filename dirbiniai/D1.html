@@ -43,27 +43,39 @@
             justify-content: start;
             flex-wrap: wrap;
             gap: 20px;
+            align-items: flex-start; /* Ensures everything aligns at the top */
             margin-top: 20px;
             margin-bottom: 20px;
             color: white;
             font-family: Arial, Helvetica, sans-serif;
         }
+
+
         .stuff h1 {
-            font-size: 30px;
+            font-size: 32px;
             font-weight: bold;
-            margin-top: 10px;
+            margin-top: 0px;
             margin-bottom: 5px;
             height: 35px;
-
+            width: 100%; /* Ensures it takes full width */
+        }
+        .stuff hr {
+            width: 100%;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            border: 1px solid white;
         }
         .stuff p {
             font-size: 20px;
-            width: 260px;
-            margin-top: 10px;
+            width: 1200px;
+            margin-top: 0px;
+            display: block;
+            align-self: flex-start; /* Keeps alignment but avoids absolute positioning */
+        }
+        .stuff a {
+            text-decoration: none;
             display: inline-block;
-            position: absolute;
-            right: 420px;
-            top: 170px;
+            color: white;
         }
         .stuff img {
             display: inline-block;
@@ -80,6 +92,10 @@
         .stuff img:active {
             transform: scale(0.98);
             transition: 0.5s;
+        }
+        .stuff img#mds2 {
+            width: 250px;
+            height: 300px;
         }
         .stuff video {
             display: inline-block;
@@ -135,8 +151,13 @@
         <div class="stuff">
             <a href="../img/dirb/t1.jpg"><img src="img/t1.jpg" alt="mds"></a>
             <video src="../vid/VD1.mp4" controls>vd</video>
+            <a href="../img/dirb/t2.jpg">
+                <img src="img/t2.jpg" alt="mds" id="mds2">
+            </a>
+            
             <h1>Darbas 1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iure velit consequatur aliquid neque fugiat esse natus expedita rem modi. Nihil iure id, fugiat et necessitatibus quidem maiores perspiciatis exercitationem, quos assumenda laborum ad corrupti facilis unde dolor, inventore reiciendis libero atque eos laudantium saepe accusamus odit! Similique, unde sunt?</p>
+            <hr>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis corrupti ad reprehenderit esse nihil fugiat accusamus numquam? Neque sunt molestias provident laborum maxime? Similique cum culpa, corrupti quos dolore dolores doloribus. Porro magni sapiente illum facere ad unde, delectus aspernatur, sunt ratione enim aut nobis, nemo libero. Earum aliquid autem et consequatur, quam quas?</p>
         </div>
     </div>
     <img src="img/t2.png" alt="Md" id="tree">
