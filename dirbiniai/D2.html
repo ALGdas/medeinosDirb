@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medeinos dirbiniai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="img/x-icon">
+
+    <style>
+        .back {
+            width: 100px;
+            height: 50px;
+            list-style-type: none;
+            background-color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            border: #5b8357;
+            transition: 0.3s;
+        }
+        .back a {
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+        .back:hover {
+            background-color: #5b8357;
+            transition: 0.3s;
+        }
+        .back a:hover {
+            color: #d8d8d8;
+            transition: 0.3s;
+        }
+        .back a:active {
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .stuff {
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start; /* Ensures everything aligns at the top */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        .stuff h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            height: 35px;
+            width: 100%; /* Ensures it takes full width */
+        }
+        .stuff hr {
+            width: 100%;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            border: 1px solid white;
+        }
+        .stuff p {
+            font-size: 20px;
+            width: 1200px;
+            margin-top: 0px;
+            display: block;
+            align-self: flex-start; /* Keeps alignment but avoids absolute positioning */
+        }
+        .stuff a {
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+        }
+        .stuff img {
+            display: inline-block;
+            width: 500px;
+            height: 600px;
+            border-radius: 10%;
+            transition: 0.5s;
+        }
+
+        .stuff img:hover {
+            transform: scale(1.02);
+            transition: 0.5s;
+        }
+        .stuff img:active {
+            transform: scale(0.98);
+            transition: 0.5s;
+        }
+        .stuff img#mds2 {
+            width: 250px;
+            height: 300px;
+        }
+        .stuff video {
+            display: inline-block;
+            width: 340px;
+            height: 400px;
+            border-radius: 2%;
+            background-color: #465844;
+            transform: 0.5s;
+        }
+        .stuff video:hover {
+            background-color: #4e724b;
+            transform: scale(1.02);
+            transition: 0.5s;
+        }
+        .stuff video:active {
+            background-color: #465844;
+            transform: scale(0.98);
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="virsus">
+        <div class="header">
+            <a href="#" id="logo">
+                <img src="img/logo.png" alt="Mdirb." width="100" height="100">
+            </a>
+            <h1 id="name">MEDEINOS&nbsp;<span id="name2">DIRBINIAI</span></h1>
+
+            <div>
+                <button class="back">
+                    <a href="../index.html">Atgal</a>
+                </button>
+            </div>
+
+            <div class="links">
+                <ul >
+                    <li>
+                        <p>medeinosdirbiniai@gmail.com</p>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100075913506892">
+                        <img src="img/fb.svg" alt="facebook" width="50" height="50">
+                        </a>
+                        
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="stuff">
+            <a href="../img/dirb/t2.jpg">
+                <img src="img/t2.jpg" alt="mds">
+            </a>
+            <video src="../vid/VD3.mp4" controls>vd</video>
+            <a href="../img/dirb/t1.jpg">
+                <img src="img/t1.jpg" alt="mds" id="mds2">
+            </a>
+            
+            <h1>Darbas 2</h1>
+            <hr>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis corrupti ad reprehenderit esse nihil fugiat accusamus numquam? Neque sunt molestias provident laborum maxime? Similique cum culpa, corrupti quos dolore dolores doloribus. Porro magni sapiente illum facere ad unde, delectus aspernatur, sunt ratione enim aut nobis, nemo libero. Earum aliquid autem et consequatur, quam quas?</p>
+        </div>
+    </div>
+    <img src="img/t2.png" alt="Md" id="tree">
+
+</body>
+</html>
