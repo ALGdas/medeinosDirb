@@ -65,3 +65,18 @@ body {
     padding: 3px;
     
 }
+
+.links ul li p a {
+    text-decoration: none;
+    color: #465844;
+}
+
+.links ul li p a:hover {
+    color: #5b8357;
+    transition: 0.5s;
+}
+
+.links ul li p a:active {
+    color: #99bd95;
+    transition: 0.1589s;
+}
