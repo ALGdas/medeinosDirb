@@ -19,9 +19,6 @@ html {
     z-index: 10;
 }
 
-.header a:first-child {
-    pointer-events: none;
-}
 
 #searchBar {
     padding: 5px;
