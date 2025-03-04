@@ -23,6 +23,39 @@ html {
     pointer-events: none;
 }
 
+#searchBar {
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 130px;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    z-index: 10;
+
+    background-color: #465844;
+    color: #99bd95;
+    border: 1px solid;
+    border-color: #99bd95;
+}
+
+#reset {
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100px;
+    right: 10px;
+    top: 50px;
+    position: absolute;
+    display: none;
+    z-index: 10;
+
+    background-color: #465844;
+    color: #99bd95;
+    border: 1px solid;
+    border-color: #99bd95;
+}
+
 body {
     background-color: #5b8357;
 }
@@ -101,7 +134,7 @@ body {
 
 #altC {
     position: absolute;
-    top: 0%;
+    top: 10%;
     right: 2%;
     display: flex;
     margin: none;
@@ -138,6 +171,30 @@ body {
 .stuff a {
     display: inline-block;
     list-style-type: none;
+    text-decoration: none;
+}
+
+.stuff a p {
+    font-size: 15px;
+    font-weight: bold;
+    color: #465844;
+    border: 1px solid;
+    border-color: #465844;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.5s;
+    margin: 0px;
+    padding: 1px;
+}
+
+.stuff a p:hover {
+    color: #5b8357;
+    transition: 0.5s;
+}
+
+.stuff a p:active {
+    color: #99bd95;
+    transition: 0.1589s;
 }
 
 
@@ -176,4 +233,28 @@ body {
     position: relative;
     top: 10%;
     right: 0%;
+}
+
+::weebkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #99bd95;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #465844;
+    border-radius: 10px;
+}
+
+::webkit-scrollbar-thumb:hover {
+    background-color: #567e52;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #99bd95 #465844;
+    transition: 0.3s;
 }

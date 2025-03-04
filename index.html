@@ -34,6 +34,13 @@
             left: 0px;
         }
 
+        #categoryDropdown {
+            background-color: #465844;
+            color: #99bd95;
+            border: 1px solid;
+            border-color: #99bd95;
+        }
+
         select {
             font-size: 18px;
             padding: 5px;
@@ -73,17 +80,24 @@
         </div>
         <img src="img/t2.png" alt="medis" id="tree">
 
+        <input type="text" id="searchBar" placeholder="Ieškoti..">
+        <input type="button" id="reset" value="Atšaukti">
+
         <div class="stuff" id="stuffContainer">
             <!-- Dirbiniai -->
             <a href="dirbiniai/D1.html">
-                <img src="img/dirb/t1.jpg" alt="Dirb. 1">
+                <img src="img/dirb/t1.jpg" alt="Dirb 1">
+                <p>Dirb. 1</p>
             </a>
             <a href="dirbiniai/D2.html">
-                <img src="img/dirb/t2.jpg" alt="Dirb. 2">
+                <img src="img/dirb/t2.jpg" alt="Dirb 2">
+                <p>Dirb. 2</p>
             </a>
             <a href="dirbiniai/D3.html">
-                <img src="img/dirb/t3.jpg" alt="Dirb. 3">
+                <img src="img/dirb/t3.jpg" alt="Dirb 3">
+                <p>Dirb. 3</p>
             </a>
+
         </div>
         
 
@@ -94,9 +108,8 @@
             </div>
         </div>
         
-    </div>
 
-    
+    </div>
 
     <img id="secretImage1" class="hidden-image" src="img/lape.png" alt="lape">
     <img id="secretImage2" class="hidden-image" src="img/alisa.png" alt="alisa">
@@ -110,9 +123,9 @@
 
         const content = {
             dirb: `
-                <a href="dirbiniai/D1.html"><img src="img/dirb/t1.jpg" alt="Dirb. 1"></a>
-                <a href="dirbiniai/D2.html"><img src="img/dirb/t2.jpg" alt="Dirb. 2"></a>
-                <a href="dirbiniai/D3.html"><img src="img/dirb/t3.jpg" alt="Dirb. 3"></a>
+                <a href="dirbiniai/D1.html"><img src="img/dirb/t1.jpg" alt="Dirb. 1"> <p>Dirb. 1</p></a>
+                <a href="dirbiniai/D2.html"><img src="img/dirb/t2.jpg" alt="Dirb. 2"> <p>Dirb. 2</p></a>
+                <a href="dirbiniai/D3.html"><img src="img/dirb/t3.jpg" alt="Dirb. 3"> <p>Dirb. 3</p></a>
             `,
 
             ekspo: `
@@ -142,6 +155,42 @@
             }
         });
     </script>
+
+    <!-- Paieška  (Jieško <a> alt teksta) -->
+    <script>
+        document.getElementById("searchBar").addEventListener("input", function () {
+            let filter = this.value.toLowerCase().replace(/[^a-z0-9]/g, "");
+            let items = document.querySelectorAll("#stuffContainer a");
+
+            items.forEach(item => {
+                let text = item.innerText.toLowerCase().replace(/[^a-z0-9]/g, "");
+                let altText = item.querySelector("img")?.alt.toLowerCase().replace(/[^a-z0-9]/g, "") || "";
+                
+                if (text.includes(filter) || altText.includes(filter)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+    <!-- Reset button -->
+    <script>
+        document.getElementById("reset").addEventListener("click", function () {
+            stuffContainer.innerHTML = content[dropdown.value];
+        });
+
+        document.getElementById("searchBar").addEventListener("input", function () {
+            document.getElementById("reset").style.display = this.value ? "block" : "none";
+        });
+
+        document.getElementById("reset").addEventListener("click", function () {
+            document.getElementById("searchBar").value = "";
+            this.style.display = "none";
+        });
+    </script>
+
 
 </body>
 </html>
